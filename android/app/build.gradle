@@ -30,6 +30,12 @@ android {
         versionName = flutter.versionName
     }
 
+    repositories {
+        flatDir {
+            dirs 'libs' // This adds the libs folder
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -41,4 +47,8 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation project(':AJVoIP')
 }
